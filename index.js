@@ -34,6 +34,11 @@ app.use('/brand', brandRoutes);
 app.use('/todo', todoRoutes);
 app.use('/image', fileRoutes);
 
+app.get("/", (req, res) => {
+  res.send("Backend API is running successfully 🚀");
+});
+
+
 getConnection();
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
